@@ -25,15 +25,15 @@ $(document).ready(function() {
         const cityName = data.location.name;
         const region=data.location.region
         const temperature = data.current.temp_c;
+        const temperaturef = data.current.temp_f;
         const pre= data.current.condition.text;
         const weatherDescription = data.current.precip_in;
-        // const iconCode = data.current.condition.icon;
-        // const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
 
         const weatherHtml = `
             <h2>${cityName}</h2>
             <h3>${region}</h3>
             <p>${temperature}°C</p>
+            <p>${temperaturef}°F</p>
             <p>${weatherDescription}</p>
             <p>${pre}</p>
         `;
