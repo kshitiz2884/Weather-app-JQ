@@ -25,17 +25,17 @@ $(document).ready(function() {
         const cityName = data.location.name;
         const region=data.location.region
         const temperature = data.current.temp_c;
-        const temperaturef = data.current.temp_f;
+        const humidity = data.current.humidity;
         const pre= data.current.condition.text;
-        const weatherDescription = data.current.precip_in;
+        const visibility = data.current.vis_km;
 
         const weatherHtml = `
             <h2>${cityName}</h2>
             <h3>${region}</h3>
-            <p>${temperature}°C</p>
-            <p>${temperaturef}°F</p>
-            <p>${weatherDescription}</p>
-            <p>${pre}</p>
+            <p>Temp: ${temperature}°C</p>
+            <p>Humidity: ${humidity}%</p>
+            <p>Visibility: ${visibility} KM</p>
+            <p>Current Weather: ${pre}</p>
         `;
 
         $('#weatherInfo').html(weatherHtml);
